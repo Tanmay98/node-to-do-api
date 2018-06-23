@@ -1,8 +1,8 @@
 const expect = require('expect');
 const request = require('supertest');
 
-const {app} = require('./../server');
-const {Todo} = require('./../models/todo');
+const {app} = require('./../server.js');
+const {Todo} = require('./../models/todo.js');
 
 beforeEach((done) => {
   Todo.remove({}).then(() => done());
@@ -23,7 +23,7 @@ describe('POST /todos', () => {
         if (err) {
           return done(err);
         }
-
+        // checking if database saves our text correctly
         Todo.find().then((todos) => {
           expect(todos.length).toBe(1);
           expect(todos[0].text).toBe(text);
@@ -49,3 +49,16 @@ describe('POST /todos', () => {
       });
   });
 });
+
+describe('GET /todos', () => {
+  
+});
+
+
+
+
+
+
+
+
+

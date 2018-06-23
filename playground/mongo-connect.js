@@ -1,5 +1,5 @@
 // const MongoClient = require('mongodb').MongoClient;
-// object desytruction feature of es6
+// object destruction feature of es6
 const {MongoClient, ObjectID} = require('mongodb');
 const url = 'mongodb://localhost:27017/TodoApp';
 
